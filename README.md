@@ -11,7 +11,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
   <body>
@@ -38,10 +37,11 @@
           <p>Senior Quality Engineer | AI Transformation </p>
           <div class="divider"></div>
           <p>
-            Hello! I’m Ravi, a passionate software engineer with a passion for delivering high-quality software solutions with around 8 years of professional experience. I have strong skillset in automation testing and a wide array of tools & methodologies. 
+            Hello! I’m Ravi, a passionate software engineer with a passion for
+            delivering high-quality software solutions with around 8 years of
+            professional experience. I have strong skillset in au[...]
           </p>
           <!-- Download Resume Button -->
-
           <a
             href="./assets/updated_Resume.pdf"
             target="_blank"
@@ -65,98 +65,91 @@
           >
             Download Resume
           </a>
-
           <!-- Social Media Links -->
         </div>
       </div>
-
-
       <div class="experience" id="experience-section">
         <h2>8 Years of Experience</h2>
-
-       
-       
-
-    <!-- Footer -->
-
-    <footer id="footer">
-      <h3 style="margin-bottom: 2%">
-        Contact Info:
-        <hr style="border: 3px solid #4caf50" />
-      </h3>
-
-      <!-- Footer grid container -->
-      <div class="footer-grid">
-        <!-- Social media links with icons and text (in one column) -->
-        <div class="socials">
-          <div class="social-item">
-            <a
-              href="https://www.linkedin.com/in/ravichandrasurabhi"
-              target="_blank"
-              class="fab fa-linkedin"
-            ></a>
-            <span>LinkedIn</span>
-          </div>
-          <div class="social-item">
-            <a
-              href="https://github.com/ravichandrasurabhi"
-              target="_blank"
-              class="fab fa-github"
-            ></a>
-            <span>GitHub</span>
-          </div>
-        </div>
-
-        <!-- Contact details (email and phone) (in another column) -->
-        <div class="contact-info">
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:ravichandrasurabhi@gmail.com">ravichandrasurabhi@gmail.com</a>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-phone-alt"></i>
-            <a href="tel:+19">NA</a>
-          </div>
-        </div>
       </div>
-    </footer>
+      <!-- Footer -->
+      <footer id="footer">
+        <h3 style="margin-bottom: 2%">
+          Contact Info:
+          <hr style="border: 3px solid #4caf50" />
+        </h3>
+        <!-- Footer grid container -->
+        <div class="footer-grid">
+          <!-- Social media links with icons and text (in one column) -->
+          <div class="socials">
+            <div class="social-item">
+              <a
+                href="https://www.linkedin.com/in/ravichandrasurabhi"
+                target="_blank"
+                class="fab fa-linkedin"
+              ></a>
+              <span>LinkedIn</span>
+            </div>
+            <div class="social-item">
+              <a
+                href="https://github.com/ravichandrasurabhi"
+                target="_blank"
+                class="fab fa-github"
+              ></a>
+              <span>GitHub</span>
+            </div>
+          </div>
+          <!-- Contact details (email and phone) (in another column) -->
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:ravichandrasurabhi@gmail.com"
+                >ravichandrasurabhi@gmail.com</a
+              >
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <a href="tel:+19">NA</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- JavaScript to handle the scroll functionality -->
+      <script>
+        document
+          .getElementById("scroll-to-exp")
+          .addEventListener("click", function () {
+            document.getElementById("experience-section").scrollIntoView({
+              behavior: "smooth",
+            });
+          });
 
-    <!-- JavaScript to handle the scroll functionality -->
-    <script>
-      document
-        .getElementById("scroll-to-exp")
-        .addEventListener("click", function () {
-          document.getElementById("experience-section").scrollIntoView({
-            behavior: "smooth",
+        // Handle stepper clicks
+        const steps = document.querySelectorAll(".step");
+        const experienceDetails = document.querySelectorAll(
+          ".experience-details"
+        );
+        const activeBar = document.querySelector(".active-bar");
+
+        steps.forEach((step) => {
+          step.addEventListener("click", () => {
+            const stepNumber = step.getAttribute("data-step");
+
+            // Remove active class from all steps and details
+            steps.forEach((s) => s.classList.remove("active"));
+            experienceDetails.forEach((d) => d.classList.remove("active"));
+
+            // Add active class to clicked step and corresponding experience details
+            step.classList.add("active");
+            document
+              .querySelector(`.experience-details[data-step="${stepNumber}"]`)
+              .classList.add("active");
+
+            // Update progress bar
+            const width = (stepNumber - 1) * 33.33; // For 4 steps, each step is 33.33%
+            activeBar.style.width = `${width}%`;
           });
         });
-
-      // Handle stepper clicks
-      const steps = document.querySelectorAll(".step");
-      const experienceDetails = document.querySelectorAll(
-        ".experience-details"
-      );
-      const activeBar = document.querySelector(".active-bar");
-
-      steps.forEach((step) => {
-        step.addEventListener("click", () => {
-          const stepNumber = step.getAttribute("data-step");
-
-          // Remove active class from all steps and details
-          steps.forEach((s) => s.classList.remove("active"));
-          experienceDetails.forEach((d) => d.classList.remove("active"));
-
-          // Add active class to clicked step and corresponding experience details
-          step.classList.add("active");
-          document
-            .querySelector(`.experience-details[data-step="${stepNumber}"]`)
-            .classList.add("active");
-
-          // Update progress bar
-          const width = (stepNumber - 1) * 33.33; // For 4 steps, each step is 33.33%
-          activeBar.style.width = `${width}%`;
-        });
-      });
-    </script>
+      </script>
+    </div>
   </body>
 </html>
