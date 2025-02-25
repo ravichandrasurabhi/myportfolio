@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -71,34 +70,11 @@
         </div>
       </div>
 
-      <!-- Scroll to Experience Icon -->
-      <div class="scroll-to-experience" id="scroll-to-exp">
-        <i class="fas fa-arrow-down"></i>
-        <h3>see experience</h3>
-      </div>
 
-      <!-- Experience Section with Stepper -->
       <div class="experience" id="experience-section">
-        <h2>Experience</h2>
+        <h2>8 Years of Experience</h2>
 
-        <!-- Stepper Container -->
-        <div class="stepper-container">
-          <div class="step" data-step="1">2017</div>
-          <div class="step" data-step="2">2018</div>
-          <div class="step" data-step="3">2019</div>
-          <div class="step" data-step="4">2020</div>
-          <div class="step" data-step="5">2021</div>
-          <div class="step" data-step="6">2022</div>
-          <div class="step" data-step="7">2023</div>                 
-          <div class="step active" data-step="8">2024</div>
-          <div class="step" id="mobile-view" data-step="9">2025</div>
-        </div>
-
-        <!-- Progress Bar -->
-        <div class="stepper-progress">
-          <div class="active-bar" style="width: 20%"></div>
-        </div>
-
+       
        
 
     <!-- Footer -->
