@@ -23,7 +23,7 @@
           href="#"
           class="logo"
           style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
-          >Saismaran Hota</a
+          >Ravi Chandra Surabhi</a
         >
         <ul class="nav-links">
           <!-- <li><a href="#home">Home</a></li> -->
