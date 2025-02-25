@@ -1,316 +1,272 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ravi's Portfolio</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <style>
-      body {
-        font-family: 'Poppins', sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
-        margin: 0;
-        padding: 0;
-      }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
-      .navbar {
-        background-color: #0065A9;
-        color: white;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+        .navbar {
+            background-color: #0065A9;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-      .navbar .logo {
-        font-size: 24px;
-        font-weight: 600;
-        color: white;
-        text-decoration: none;
-      }
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+        }
 
-      .nav-links {
-        list-style: none;
-        display: flex;
-        margin: 0;
-      }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+        }
 
-      .nav-links li {
-        margin: 0 15px;
-      }
+        .nav-links li {
+            margin: 0 15px;
+        }
 
-      .nav-links a {
-        color: white;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 400;
-        transition: color 0.3s;
-      }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
 
-      .nav-links a:hover {
-        color: #f4f4f4;
-      }
+        .nav-links a:hover {
+            color: #f4f4f4;
+        }
 
-      .bio-card {
-        background-color: white;
-        padding: 40px;
-        margin-top: 60px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
+        .bio-card {
+            background-color: white;
+            padding: 40px;
+            margin-top: 60px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-      .bio-card img {
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        margin-right: 30px;
-      }
+        .bio-card img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 30px;
+        }
 
-      .bio-text h2 {
-        font-size: 28px;
-        font-weight: 600;
-        color: #0065A9;
-        margin-bottom: 10px;
-      }
+        .bio-text h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #0065A9;
+            margin-bottom: 10px;
+        }
 
-      .bio-text p {
-        font-size: 16px;
-        color: #666;
-        line-height: 1.6;
-      }
+        .bio-text p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
 
-      .divider {
-        width: 60px;
-        height: 3px;
-        background-color: #0065A9;
-        margin: 15px 0;
-      }
+        .divider {
+            width: 60px;
+            height: 3px;
+            background-color: #0065A9;
+            margin: 15px 0;
+        }
 
-      .download-btn {
-        padding: 12px 30px;
-        font-size: 16px;
-        color: #fff;
-        background-color: #0065A9;
-        text-decoration: none;
-        border-radius: 30px;
-        border: 2px solid #005086;
-        transition: all 0.3s ease-in-out;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        display: inline-block;
-        text-align: center;
-      }
+        .download-btn {
+            padding: 12px 30px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #0065A9;
+            text-decoration: none;
+            border-radius: 30px;
+            border: 2px solid #005086;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: center;
+        }
 
-      .download-btn:hover {
-        background-color: #fff;
-        color: #0065A9;
-        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
-      }
+        .download-btn:hover {
+            background-color: #fff;
+            color: #0065A9;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+        }
 
-      .experience {
-        margin-top: 60px;
-        padding: 40px;
-        background-color: #0065A9;
-        color: white;
-        text-align: center;
-      }
+        .experience {
+            margin-top: 60px;
+            padding: 40px;
+            background-color: #0065A9;
+            color: white;
+            text-align: center;
+        }
 
-      .experience h2 {
-        font-size: 32px;
-        font-weight: 600;
-      }
+        .experience h2 {
+            font-size: 32px;
+            font-weight: 600;
+        }
 
-      footer {
-        background-color: #0065A9;
-        color: white;
-        padding: 30px 20px;
-        margin-top: 60px;
-      }
+        footer {
+            background-color: #0065A9;
+            color: white;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
 
-      footer h3 {
-        font-size: 24px;
-        margin-bottom: 15px;
-      }
+        footer h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
 
-      .footer-grid {
-        display: flex;
-        justify-content: space-between;
-      }
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+        }
 
-      .socials {
-        display: flex;
-        flex-direction: column;
-      }
+        .socials {
+            display: flex;
+            flex-direction: column;
+        }
 
-      .social-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-      }
+        .social-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
 
-      .social-item a {
-        font-size: 24px;
-        color: white;
-        margin-right: 10px;
-        transition: color 0.3s;
-      }
+        .social-item a {
+            font-size: 24px;
+            color: white;
+            margin-right: 10px;
+            transition: color 0.3s;
+        }
 
-      .social-item a:hover {
-        color: #f4f4f4;
-      }
+        .social-item a:hover {
+            color: #f4f4f4;
+        }
 
-      .contact-info {
-        display: flex;
-        flex-direction: column;
-      }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
 
-      .contact-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-      }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
 
-      .contact-item a {
-        font-size: 16px;
-        color: white;
-        text-decoration: none;
-      }
+        .contact-item a {
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+        }
 
-      .contact-item i {
-        margin-right: 10px;
-        font-size: 18px;
-      }
+        .contact-item i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
+
     <div class="container">
-      <!-- Navbar -->
-      <div class="navbar">
-        <a
-          href="#"
-          class="logo"
-          style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
-          >IBM</a
-        >
-        <ul class="nav-links">
-          <!-- <li><a href="#home">Home</a></li> -->
-          <li><a href="#experience-section">Experience</a></li>
-          <li><a href="#footer">Contact</a></li>
-        </ul>
-      </div>
-      <!-- Bio Section (Card layout) -->
-      <div class="bio-card" style="margin-top: 60px">
-        <img src="./profile.jpg" alt="Profile Picture" />
-        <div class="bio-text">
-          <h2>Ravi Chandra Surabhi</h2>
-          <p>Senior Quality Engineer | AI Transformation </p>
-          <div class="divider"></div>
-          <p>
-            Hello! I’m Ravi, Senior Quality Engineer with a passion for delivering high-quality software solutions. I have strong skillset in automation, AI transformation, and cloud technologies.
-          </p>
-          <!-- Download Resume Button -->
-          <a
-            href="./updated_Resume.pdf"
-            target="_blank"
-            download="Ravi_Resume.pdf"
-            class="download-btn"
-            >Download Resume</a
-          >
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="#" class="logo">Ravi's Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="#experience-section">Experience</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
         </div>
-      </div>
-      <div class="experience" id="experience-section">
-        <h2>8 Years of Experience</h2>
-      </div>
-      <!-- Footer -->
-      <footer id="footer">
-        <h3 style="margin-bottom: 2%">
-          Contact Info:
-          <hr style="border: 3px solid #4caf50" />
-        </h3>
-        <!-- Footer grid container -->
-        <div class="footer-grid">
-          <!-- Social media links with icons and text (in one column) -->
-          <div class="socials">
-            <div class="social-item">
-              <a
-                href="https://www.linkedin.com/in/ravichandrasurabhi"
-                target="_blank"
-                class="fab fa-linkedin"
-              ></a>
-              <span>LinkedIn</span>
+
+        <!-- Bio Section (Card layout) -->
+        <div class="bio-card" style="margin-top: 60px">
+            <img src="./profile.jpg" alt="Profile Picture" />
+            <div class="bio-text">
+                <h2>Ravi Chandra Surabhi</h2>
+                <p>Senior Quality Engineer | AI Transformation</p>
+                <div class="divider"></div>
+                <p>
+                    Hello! I’m Ravi, Senior Quality Engineer with a passion for delivering high-quality software solutions.
+                    I have a strong skillset in automation, AI transformation, and cloud technologies.
+                </p>
+                <!-- Download Resume Button -->
+                <a href="./updated_Resume.pdf" target="_blank" download="Ravi_Resume.pdf" class="download-btn">Download
+                    Resume</a>
             </div>
-            <div class="social-item">
-              <a
-                href="https://github.com/ravichandrasurabhi"
-                target="_blank"
-                class="fab fa-github"
-              ></a>
-              <span>GitHub</span>
-            </div>
-          </div>
-          <!-- Contact details (email and phone) (in another column) -->
-          <div class="contact-info">
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:ravichandrasurabhi@gmail.com"
-                >ravichandrasurabhi@gmail.com</a
-              >
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-phone-alt"></i>
-              <a href="tel:+19">NA</a>
-            </div>
-          </div>
         </div>
-      </footer>
-      <!-- JavaScript to handle the scroll functionality -->
-      <script>
-        document
-          .getElementById("scroll-to-exp")
-          .addEventListener("click", function () {
-            document.getElementById("experience-section").scrollIntoView({
-              behavior: "smooth",
+
+        <!-- Experience Section -->
+        <div class="experience" id="experience-section">
+            <h2>8 Years of Experience</h2>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <h3 style="margin-bottom: 2%">
+                Contact Info:
+                <hr style="border: 3px solid #4caf50" />
+            </h3>
+            <!-- Footer grid container -->
+            <div class="footer-grid">
+                <!-- Social media links with icons and text (in one column) -->
+                <div class="socials">
+                    <div class="social-item">
+                        <a href="https://www.linkedin.com/in/ravichandrasurabhi" target="_blank" class="fab fa-linkedin"></a>
+                        <span>LinkedIn</span>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://github.com/ravichandrasurabhi" target="_blank" class="fab fa-github"></a>
+                        <span>GitHub</span>
+                    </div>
+                </div>
+
+                <!-- Contact details (email and phone) (in another column) -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:ravichandrasurabhi@gmail.com">ravichandrasurabhi@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+19">NA</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript to handle the scroll functionality -->
+        <script>
+            document.getElementById("scroll-to-exp").addEventListener("click", function () {
+                document.getElementById("experience-section").scrollIntoView({
+                    behavior: "smooth",
+                });
             });
-          });
-
-        // Handle stepper clicks
-        const steps = document.querySelectorAll(".step");
-        const experienceDetails = document.querySelectorAll(
-          ".experience-details"
-        );
-        const activeBar = document.querySelector(".active-bar");
-
-        steps.forEach((step) => {
-          step.addEventListener("click", () => {
-            const stepNumber = step.getAttribute("data-step");
-
-            // Remove active class from all steps and details
-            steps.forEach((s) => s.classList.remove("active"));
-            experienceDetails.forEach((d) => d.classList.remove("active"));
-
-            // Add active class to clicked step and corresponding experience details
-            step.classList.add("active");
-            document
-              .querySelector(`.experience-details[data-step="${stepNumber}"]`)
-              .classList.add("active");
-
-            // Update progress bar
-            const width = (stepNumber - 1) * 33.33; // For 4 steps, each step is 33.33%
-            activeBar.style.width = `${width}%`;
-          });
-        });
-      </script>
+        </script>
     </div>
-  </body>
+
+</body>
+
 </html>
